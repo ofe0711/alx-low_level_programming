@@ -8,11 +8,11 @@ while (x <= 23)
 j = 0;
 while (j <= 59)
 {
-_putchar((x / 10) + '0');	  
+_putchar((x / 10) + '0');
 _putchar((x % 10) + '0');
 _putchar(':');
 _putchar((j / 10) + '0');
-_putchar((j % 10) + '0');	  
+_putchar((j % 10) + '0');
 _putchar('\n');
 j += 1;
 }
