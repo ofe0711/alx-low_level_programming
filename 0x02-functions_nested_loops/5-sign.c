@@ -4,7 +4,7 @@
 * @n: The input number to check
 * Return: int.
 */
-int print_sign(int c)
+int print_sign(int n)
 {
 if (n > 0)
 {      
