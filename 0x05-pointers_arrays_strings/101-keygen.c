@@ -1,26 +1,34 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 /**
-* main - check the code for Holberton School students.
-* 
-* Return: Always 0.
+* main - print password.
+*
+* Return: 0.
 */
 int main(void)
 {
-char seed[53] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-char password[22];
-int i, n, passw, complem;
-srand(time(0));
-for (i = 0; passw < 2772; i++)
+int ascii = 2772, i = 0, j, random;
+char password[100];
+time_t t;
+srand((int) time(&t));
+while (ascii > 126)
 {
-n = rand() % 10;
-password[i] = seed[n];
-passw += password[i];
+random = rand() % 126;
+password[i] = random;
+ascii -= random;
+i++;
 }
-complem = 2772 - passw;
-password[i] = complem;
-printf("%s\n",  password);
+if (ascii > 0)
+password[i] = ascii;
+else
+{
+i--;
+}
+for (j = 0; j <= i; j++)
+{
+printf("%c", password[j]);
+}
 return (0);
 }
