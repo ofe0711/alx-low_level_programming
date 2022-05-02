@@ -31,7 +31,8 @@ if (nmemb == 0 || size == 0)
 {
 return (NULL);
 }
-str = malloc(nmemb * size);if (str == NULL)
+str = malloc(nmemb * size);
+if (str == NULL)
 {
 return (NULL);
 }
